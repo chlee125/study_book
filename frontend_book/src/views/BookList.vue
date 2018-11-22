@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  data:function() {
+  data: function() {
     return {
-      items = [];
-    }
+      items: []
+    };
   },
   mounted() {
     console.log("mount");
@@ -21,6 +21,5 @@ export default {
       console.log(result);
     });
   }
-}
-
+};
 </script>
