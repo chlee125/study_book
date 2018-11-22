@@ -12,13 +12,16 @@
 export default {
   data: function() {
     return {
-      items: []
+      books: []
     };
   },
   mounted() {
-    console.log("mount!");
-    axios.get("http://localhost:3000/books").then(result => {
-      console.log(result);
+    var that = this;
+    axios.get("http://localhost:3000/books").then(response => {
+      var result = response.data;
+
+      result.map(item => that.books.push(item));
+      console.log(item);
     });
   }
 };
