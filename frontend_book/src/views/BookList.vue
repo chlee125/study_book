@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    console.log("mount");
+    console.log("mount!");
     axios.get("http://localhost:3000/books").then(result => {
       console.log(result);
     });
