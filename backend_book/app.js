@@ -4,6 +4,7 @@ const favicon = require("serve-favicon");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const routes = require("./routes/index");
 const users = require("./routes/user");
@@ -20,6 +21,8 @@ app.locals.ENV_DEVELOPMENT = env == "development";
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// 크로스웹 보안 관련 cors 추가
+app.use(cors());
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger("dev"));
 app.use(bodyParser.json());
