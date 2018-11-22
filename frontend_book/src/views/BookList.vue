@@ -10,17 +10,16 @@
 
 <script>
 export default {
-  data:function() {
+  data: function() {
     return {
-      items = [];
-    }
+      items: []
+    };
   },
   mounted() {
-    console.log("mount");
+    console.log("mount!");
     axios.get("http://localhost:3000/books").then(result => {
       console.log(result);
     });
   }
-}
-
+};
 </script>
